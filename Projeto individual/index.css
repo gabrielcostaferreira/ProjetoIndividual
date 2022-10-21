@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    padding: 0 12%;
+  }
+  
+  .decoder {
+    width: 100%;
+    height: 650px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 3rem;
+    text-shadow: -1px 1px 0 #41ba45, 1px 1px 0 #c63d2b,         
+  }
+  
+  .titulo h2 {
+    overflow: hidden; 
+    white-space: nowrap; 
+    margin: 0 auto;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  .titulo2 {
+    display: none;
+  }
+  
+  .esquerda {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  textarea {
+    resize: none;
+    font-size: 22px;
+    height: 220px;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    
+  }
+  
+  ::placeholder {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+  }
+  
+  .opções {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  fieldset {
+    border: none;
+  }
+  
+  .metodo {
+    font-size: 16px;
+    margin-top: 6px;
+    border: 1px solid rgb(255, 217, 19);
+    color: white;
+  }
+  
+  .codificadores {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    color: white;
+  }
+  
+  .passas {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 57px;
+    font-size: 22px;
+    width: 30%;
+    margin-left: 10px;
+    border: 1px solid rgb(255, 217, 19);
+  }
+  
+  .passo output {
+    padding-top: 1px;
+    font-size: 15px;
+    background: #252525;
+  }
+  
+  .metodo,
+  .passo {
+    background-color: #252525;
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+  
+  .direita {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+   justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .resposta {
+    position: absolute;
+    width: 93%;
+    height: 85%;
+    text-align: justify;
+    overflow: auto;
+  }
+  
+  output {
+    padding-top: 10px;
+    font-size: 22px;
+    background: #ffffff;
+    color: white;
+  }
+  
+  .btn-copiar {
+    display: none;
+    background: rgb(56, 19, 4);
+    border: 1px solid #000000;
+    text-align: center;
+    position: absolute;
+    color: white;
+    font-weight: 500;
+    left: 0; 
+    right: 0; 
+    bottom: 20px;
+    margin: 0 auto;
+    width: 100px;  
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .btn-copiar:hover {
+    background: rgb(30, 30, 32);   
+  }
+  
+  .btn-copiar:active {
+    background: rgb(16, 16, 17);
+  }
+  
+  .saida {
+    position: relative;
+    width: 75%;
+    height: 700px;
+    color: rgb(0, 0, 0);
+    word-wrap: break-word;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px 15px;  
+  }
+  
+  .saida h4 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  
+  .saida h5 {
+    font-weight: 300;
+  }
+  
+  .saida img {
+    width: 80%;
+  }
+  
+  .enviar {
+    margin-top: 20px;
+    width: 150px;
+    height: 56px;
+    background-color: #414141;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    border: 1px solid rgb(255, 217, 19);
+  }
+  
+  .enviar:hover {
+    transform: scale(1.2) translateY(10px);
+    transition: .8s;
+  }
+  
+  .enviar:active {
+    background: #e0e1e1;
+  }
+  
+  @media (max-width: 1560px) {
+    .decoder {
+      height: 550px;
+    } 
+    body {
+      padding: 0 5%;
+    }
+  }
+  
+  @media (max-width: 720px) {
+    .decoder {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+    .esquerda {
+      width: 100%;
+    }
+    .direita {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .esquerda {
+      height: 70%;
+    }
+    .enviar {
+      margin-bottom: 10px;
+    }
+    .enviar:hover {
+      transform: none;
+      transition: none;
+    }
+  }
+  @media (max-width: 480px) {
+    body {
+      height: auto;
+    }
+    .titulo {
+      display: none;
+    }
+    .titulo2 {
+      display: initial;
+      text-align: center;
+      margin-bottom: 15px;
+      color: white;
+      font-size: 100%;
+      text-shadow: -1px 1px 0 #41ba45,
+              1px 1px 0 #c63d2b,
+              1px -1px 0 #42afac,
+              -1px -1px 0 #c6c23f;
+    }
+    .direita {
+      height: 80%;
+    }
+    .saida h4 {
+      font-size: 22px;
+    }
+    .esquerda {
+      height: 80%;
+    }
+    .escolhas {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .passo {
+      width: 90%;
+      margin-top: 10px;
+    }
+  }
